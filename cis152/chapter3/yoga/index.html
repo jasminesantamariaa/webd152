@@ -1,44 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Path of Light Yoga Studio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Path of Light Yoga Studio</title>
+
+  <!-- Google Font: Noto Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      background-color: #fafafa;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    header h1 {
+      font-weight: 600;
+      font-size: 2rem;
+      margin-bottom: 10px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #555;
+    }
+
+    main {
+      max-width: 700px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      font-weight: 600;
+      font-size: 1.8rem;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-weight: 300;
+      color: #444;
+    }
+
+    ul {
+      list-style: none;
+      margin: 20px 0;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 8px 0;
+      font-weight: 400;
+    }
+
+    div p {
+      margin-top: 30px;
+      font-weight: 300;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    footer {
+      border-top: 1px solid #ddd;
+      margin-top: 40px;
+      padding-top: 15px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-    <header><h1>Path of Light Yoga</h1></header>
+  <header>
+    <h1>Path of Light Yoga</h1>
+  </header>
 
-<nav><ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="classes.html">Classes</a></li>
-    <li><a href="schedule.html">Schedule</a></li>
-    <li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-<main>
-    <h2>Find Your Inner Light</h2>
-    <p>Path of Light Yoga Studio provies all levels of yoga practice in a tranquil, peaceful environment. Whether you are new to yoga or an experienced practionioner, our dedicated instructors can develop a practice to meet yoru needs. Let your inner light shine at the Path of Light Yoga Studio.
-    </p>
+  <nav>
     <ul>
-       <li>Hatha, Vinyasa, and Restorative Yoga classes</li>
-        <li>Drop-ins welcome</li>
-        <li>Mats, blocks, and blankets provided</li>
-        <li>Relax before or after your class in our Serenity Lounge</li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="classes.html">Classes</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
-<div>
-  <p>
-    612 Serenity Way <br>
-    El Dorado, AZ 86336 <br>
-    888-555-5555
-  </p>
-</div>
-<footer>
-  <p>
-    <small><i>&copy; 2021 Path of Light Yoga Studio</i></small><br>
-    Jasmine Santa Maria
-  </p>
-</footer>
+  </nav>
 
-</main>
+  <main>
+    <h2>Find Your Inner Light</h2>
+    <p>
+      Path of Light Yoga Studio provides all levels of yoga practice in a tranquil, peaceful environment. 
+      Whether you are new to yoga or an experienced practitioner, our dedicated instructors can develop a practice to meet your needs. 
+      Let your inner light shine at the Path of Light Yoga Studio.
+    </p>
+
+    <ul>
+      <li>Hatha, Vinyasa, and Restorative Yoga classes</li>
+      <li>Drop-ins welcome</li>
+      <li>Mats, blocks, and blankets provided</li>
+      <li>Relax before or after your class in our Serenity Lounge</li>
+    </ul>
+
+    <div>
+      <p>
+        612 Serenity Way <br>
+        El Dorado, AZ 86336 <br>
+        888-555-5555
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      <small><i>&copy; 2021 Path of Light Yoga Studio</i></small><br>
+      Jasmine Santa Maria
+    </p>
+  </footer>
 </body>
 </html>
