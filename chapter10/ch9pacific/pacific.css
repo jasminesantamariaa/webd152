@@ -1,0 +1,472 @@
+/* Chapter 8 Pacific Trails CSS */
+
+/* ===========================
+   Global Styles
+=========================== */
+
+/* Ensure consistent sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base design: gradient, border, and shadow */
+body {
+  color: #555;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background: linear-gradient(white, #90C7E3);
+  border: 1px solid #003;
+  box-shadow: 3px 3px 3px #333;
+  margin: 0;
+}
+
+/* ===========================
+   Wrapper
+=========================== */
+
+#wrapper {
+  background-color: #fff;
+  max-width: 80%;
+  margin: 0 auto;
+  border: 1px solid #003;
+  box-shadow: 3px 3px 3px #333;
+  padding: 1rem;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+header {
+  background-color: #000032;
+  color: #fff;
+  background-image: url("images/sunset.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0;
+  letter-spacing: 0.25em;
+}
+
+/* Optional: style header links (if any) */
+header a:link,
+header a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+header a:hover,
+header a:active {
+  text-decoration: underline;
+}
+
+/* ===========================
+   Navigation Menu
+=========================== */
+
+nav {
+  background-color: transparent;
+  font-weight: bold;
+  padding: 1.5em;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+nav li {
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem 0;
+}
+
+nav a:link,
+nav a:visited {
+  color: #5C7FA3;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:active {
+  color: #A52A2A;
+  text-decoration: underline;
+}
+
+/* ===========================
+   Headings / Main / Footer
+=========================== */
+
+h1, h2, h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+  color: #1976D2;
+  text-shadow: 1px 1px #CCC;
+}
+
+h3 {
+  color: #000032;
+}
+
+main {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  overflow-wrap: break-word;
+}
+
+footer {
+  background-color: #fff;
+  font-size: 75%;
+  font-style: italic;
+  text-align: center;
+  padding: 2em;
+  overflow-wrap: break-word;
+}
+
+/* ===========================
+   Hero Images
+=========================== */
+
+#homehero,
+#yurthero,
+#trailhero {
+  background-size: cover;
+  height: 18.75rem;
+}
+
+#homehero {
+  background-image: url("images/coast.jpg");
+}
+
+#yurthero {
+  background-image: url("images/yurt.jpg");
+}
+
+#trailhero {
+  background-image: url("images/trail.jpg");
+}
+
+/* ===========================
+   Card Layout
+=========================== */
+
+.card-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-wrap: break-word;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  padding: 1rem;
+}
+
+/* Responsive: horizontal cards on larger screens */
+@media (min-width: 768px) {
+  .card-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+/* ===========================
+   Media Queries
+=========================== */
+
+/* Small Screens - up to 32.5rem (520px) */
+@media (max-width: 32.5rem) {
+
+  /* Remove gradient, border, shadow */
+  body {
+    background: #fff;
+    border: none;
+    box-shadow: none;
+  }
+
+  /* Expand wrapper full width */
+  #wrapper {
+    max-width: 100%;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    padding: 0.5rem;
+  }
+
+  /* Simplify header for mobile */
+  header {
+    background-image: none;
+    padding: 0.5rem;
+  }
+
+  /* Reduce footer padding */
+  footer {
+    padding: 1rem;
+  }
+}
+
+/* Large Screens - from 37.5rem (600px) and wider */
+@media (min-width: 37.5rem) {
+
+  /* Horizontal navigation */
+  nav ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  /* Remove bottom borders from nav items */
+  nav li {
+    border-bottom: none;
+  }
+
+  /* Cards side-by-side with spacing */
+  .card-row {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+/* ===========================
+   Yurt Packages Table Styles
+=========================== */
+
+#special {
+  margin-top: 2rem;
+}
+
+
+
+#special table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#special caption {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #002171;
+}
+
+#special th,
+#special td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #ccc;
+  vertical-align: top;
+}
+
+#special th {
+  background-color: #1976D2;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+#special tr:nth-child(even) td {
+  background-color: #f9f9f9;
+}
+
+#special tr:hover td {
+  background-color: #e3f2fd;
+}
+
+/* ===========================
+   Mobile Table (max-width: 32.5rem)
+=========================== */
+@media (max-width: 32.5rem) {
+
+  #special table {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+  }
+
+  #special thead {
+    display: none;
+  }
+
+  #special tr {
+    display: block;
+    margin-bottom: 1.25rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0.75rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  }
+
+  #special td {
+    display: block;
+    border: none;
+    border-bottom: 1px dotted #ccc;
+    padding: 0.5rem 0;
+  }
+
+  #special td:last-child {
+    border-bottom: none;
+  }
+
+  #special td::before {
+    display: block;
+    font-weight: bold;
+    color: #1976D2;
+    margin-bottom: 0.25rem;
+  }
+
+  #special td.package::before {
+    content: "Package:";
+  }
+
+  #special td.description::before {
+    content: "Description:";
+  }
+
+  #special td.nights::before {
+    content: "Nights:";
+  }
+
+  #special td.cost::before {
+    content: "Cost:";
+  }
+}
+/* ===========================
+   Hover & Transition Effects
+=========================== */
+
+#special tr {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#special tr:hover {
+  background-color: #f0f8ff;  /* light blue background */
+  color: #000000;             /* black text for contrast */
+}
+/* ===========================
+   Reservation Form Styles
+=========================== */
+
+/* Base Form Layout */
+form {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 1.5rem;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+
+legend {
+  font-weight: bold;
+  color: #002171;
+  margin-bottom: 0.75rem;
+}
+
+label {
+  display: block;
+  margin-top: 0.75rem;
+  font-weight: bold;
+  color: #000032;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #1976D2;
+  box-shadow: 0 0 5px rgba(25, 118, 210, 0.4);
+  outline: none;
+}
+
+/* Submit Button */
+input[type="submit"] {
+  background-color: #1976D2;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0d47a1;
+}
+
+/* Hero image for reservations */
+#reservationshero {
+  background-image: url("images/reservations.jpg");
+  background-size: cover;
+  height: 18.75rem;
+}
+
+/* ===========================
+   Responsive Form (max-width: 32.5rem)
+=========================== */
+@media (max-width: 32.5rem) {
+  form {
+    width: 100%;
+    padding: 1rem;
+    box-shadow: none;
+    border: none;
+  }
+
+  label,
+  input,
+  textarea,
+  input[type="submit"] {
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+
+  fieldset {
+    margin-bottom: 1rem;
+  }
+}
