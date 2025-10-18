@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- © Jasmine 2025 | All Rights Reserved -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pacific Trails Resort | Reservations</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="pacific.css">
+<meta name="description" content="Book your stay at Pacific Trails Resort. Use our secure online reservation form to plan your perfect getaway and experience coastal tranquility.">
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h1>Pacific Trails Resort</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="yurts.html">Yurts</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="reservations.html" aria-current="page">Reservations</a></li>
+      </ul>
+    </nav>
+
+    <div id="reservationshero"></div>
+
+    <main>
+      <h2>Reservations at Pacific Trails</h2>
+      <h3>Contact Us Today!</h3>
+      <p>Reserve your stay at Pacific Trails Resort by completing the form below. Fields marked with an asterisk (*) are required.</p>
+
+      <form action="https://webdevbasics.net/scripts/pacific.php" method="post" autocomplete="on">
+        <fieldset>
+          <legend>Contact Information</legend>
+
+          <label for="fname">First Name*:</label>
+          <input type="text" id="fname" name="fname" required>
+
+          <label for="lname">Last Name*:</label>
+          <input type="text" id="lname" name="lname" required>
+
+          <label for="email">Email*:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone">
+        </fieldset>
+
+        <fieldset>
+          <legend>Reservation Details</legend>
+
+          <label for="arrival">Arrival Date:</label>
+          <input type="date" id="arrival" name="arrival">
+
+          <label for="nights">Number of Nights:</label>
+          <input type="number" id="nights" name="nights" min="1" max="14">
+
+          <label for="comments">Comments*:</label>
+          <textarea id="comments" name="comments" rows="5" cols="30" required></textarea>
+        </fieldset>
+
+        <input type="submit" value="Submit Reservation">
+      </form>
+    </main>
+
+    <footer>
+      Copyright &copy; 2025 Pacific Trails Resort |
+      <a href="mailto:jasmine.santamaria@hannais.com">Jasmine Santa Maria</a>
+    </footer>
+  </div>
+</body>
+</html>
