@@ -1,0 +1,490 @@
+/* ======================================================
+   PACIFIC TRAILS RESORT :: MODERN UI REFACTOR (2025)
+   Theme: Slack-Style Clean Minimal
+====================================================== */
+
+/* ===========================
+   Global & Reset
+=========================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary: #1976d2;
+  --accent: #0d47a1;
+  --bg-main: #ffffff;
+  --bg-light: #f7f9fb;
+  --border-light: #e0e0e0;
+  --text-main: #222;
+  --text-muted: #555;
+  --radius: 10px;
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--text-main);
+  background: var(--bg-light);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ===========================
+   Wrapper
+=========================== */
+#wrapper {
+  background: var(--bg-main);
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: 2rem;
+}
+
+/* ===========================
+   Header
+=========================== */
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 2rem 1rem;
+  border-radius: var(--radius);
+  text-align: center;
+  background-image: url("images/sunset.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow-sm);
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* ===========================
+   Navigation
+=========================== */
+nav {
+  background-color: var(--bg-main);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  color: var(--primary);
+  background-color: rgba(25, 118, 210, 0.08);
+}
+
+/* ===========================
+   Headings / Main / Footer
+=========================== */
+h1, h2, h3 {
+  font-family: "Inter", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+h2 {
+  color: var(--primary);
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  color: var(--text-main);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+main {
+  background-color: var(--bg-main);
+  padding: 2rem;
+}
+
+footer {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 2rem 0 0;
+  border-top: 1px solid var(--border-light);
+}
+
+/* ===========================
+   Hero Images
+=========================== */
+#homehero,
+#yurthero,
+#trailhero,
+#abouthero,
+#reservationshero {
+  background-size: cover;
+  background-position: center;
+  height: 18.75rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.5rem;
+}
+
+#homehero { background-image: url("images/coast.jpg"); }
+#yurthero { background-image: url("images/yurt.jpg"); }
+#trailhero { background-image: url("images/trail.jpg"); }
+#reservationshero { background-image: url("images/reservations.jpg"); }
+#abouthero { background-image: url("images/sunset.jpg"); }
+
+/* ===========================
+   Card Layout
+=========================== */
+.card-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--bg-main);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .card-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* ===========================
+   Yurt Packages Table Styles
+=========================== */
+#special {
+  margin-top: 2rem;
+}
+
+#special table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+#special caption {
+  font-weight: 600;
+  text-align: left;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+#special th,
+#special td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid var(--border-light);
+}
+
+#special th {
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+#special tr:nth-child(even) td {
+  background-color: #f9f9f9;
+}
+
+#special tr {
+  transition: var(--transition);
+}
+
+#special tr:hover td {
+  background-color: #e3f2fd;
+}
+
+/* Mobile Table */
+@media (max-width: 32.5rem) {
+  #special thead { display: none; }
+  #special tr {
+    display: block;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    padding: 0.75rem;
+  }
+  #special td {
+    display: block;
+    padding: 0.5rem 0;
+    border: none;
+    border-bottom: 1px dotted var(--border-light);
+  }
+  #special td::before {
+    font-weight: 600;
+    color: var(--primary);
+    display: block;
+  }
+  #special td.package::before { content: "Package:"; }
+  #special td.description::before { content: "Description:"; }
+  #special td.nights::before { content: "Nights:"; }
+  #special td.cost::before { content: "Cost:"; }
+}
+
+/* ===========================
+   Reservation Form
+=========================== */
+form {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  margin-top: 0.25rem;
+  transition: var(--transition);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 4px rgba(25, 118, 210, 0.3);
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: var(--transition);
+}
+
+input[type="submit"]:hover {
+  background-color: var(--accent);
+}
+
+/* ===========================
+   Video Integration
+=========================== */
+.video-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.video-container video {
+  max-width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Stack for mobile */
+@media (max-width: 32.5rem) {
+  .video-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ===========================
+   Responsive Photo Gallery
+=========================== */
+#gallery {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.gallery-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background-color: var(--bg-light);
+  transition: var(--transition);
+}
+
+.gallery-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-image:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-image figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 50, 0.75);
+  color: #fff;
+  opacity: 0;
+  padding: 0.5rem;
+  transition: var(--transition);
+}
+
+.gallery-image:hover figcaption {
+  opacity: 1;
+}
+
+@media (min-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===========================
+   About Page (Meet Us)
+=========================== */
+.about-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-text {
+  flex: 1 1 300px;
+}
+
+.about-gallery {
+  flex: 1 1 400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.about-gallery img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.about-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.about-story, .about-beliefs {
+  margin-top: 2rem;
+}
+
+.about-story img, .about-beliefs img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-beliefs ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.about-beliefs li {
+  padding: 0.5rem 0;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .about-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ===========================
+   Media Queries (Wrapper)
+=========================== */
+@media (max-width: 768px) {
+  #wrapper {
+    border-radius: 0;
+    padding: 1rem;
+  }
+  nav {
+    gap: 1rem;
+  }
+}
